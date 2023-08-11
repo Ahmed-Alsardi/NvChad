@@ -38,6 +38,15 @@ local plugins = {
       vim.cmd [[silent! GoInstallDeps]]
     end,
   },
+{
+    "Exafunction/codeium.vim",
+    -- loading codeium eager
+    lazy = false,
+    config = function()
+      vim.g.codeium_enabled = true -- Enable Codeium by default
+      vim.g.codeium_idle_delay = 500 -- Set the idle delay (in milliseconds)
+    end,
+  },
 }
 
 return plugins
