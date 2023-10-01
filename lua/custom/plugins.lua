@@ -1,7 +1,7 @@
 local plugins = {
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python", "go"},
+    ft = {"python", "go", "javascript", "typescript", "json"},
     opts = function()
       return require "custom.configs.null-ls"
     end,
@@ -15,7 +15,11 @@ local plugins = {
         "ruff",
         "black",
 
-        "gopls"
+        "gopls",
+
+        "prettier",
+        "eslint-lsp",
+        "typescript-language-server",
       },
     },
   },
@@ -25,6 +29,7 @@ local plugins = {
       require "plugins.configs.lspconfig"
       require "custom.configs.pythonlspconfig"
       require "custom.configs.golspconfig"
+      require "custom.configs.javascriptlspconfig"
     end,
   },
   {
